@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chat Form</title>
+</head>
+<body>
+  <div>
+    <div id="chat-log"></div>
+    <input type="text" id="chat-input" placeholder="Type your message..." />
+    <button onclick="sendMessage()">Send</button>
+  </div>
+
+  <script>
+    function sendMessage() {
+      var message = document.getElementById("chat-input").value;
+      document.getElementById("chat-log").innerHTML += "<p>You: " + message + "</p>";
+      document.getElementById("chat-input").value = "";
+    }
+  </script>
+</body>
+</html>
